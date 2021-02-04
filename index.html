@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css" type="text/css">
+    <title>Assaf Kaner's Portfolio</title>
+</head>
+<body>
+    <nav id="nav-bar">
+        <ul>
+            <li>
+                <img src="./Images/AK-logo2.svg" alt="logo">
+            </li>
+            <li>
+                <a href="#">About</a>
+            </li>
+            <li>
+                <a href="#projects">Work</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+            
+        </ul>
+    </nav>
+    <section class="about" id="about">
+        <div class="intro">
+            <p>HI,</p>
+            <p>My name is</p>
+            <p>Assaf Kaner</p>
+            <p>I'm a full stack developer</p>
+            <button class="down-cv">Download CV</button>
+            <button class="hire">Hire Me</button>
+        </div>
+        <div class="intro-image">
+            <img id="image" src="./Images/Andorra-trio.jpeg" alt="three guys skiing">
+            <p class="image-description">Andorra 2020</p>
+        </div>
+    </section>
+    <section class="projects" id="projects">
+        <div class="project-tiles">
+
+            <div class="projectTile" id="todo">
+                <a href="https://kanera.github.io/pre-course-2021-final/src/index.html" target="_blank">
+                    <img class="project-image" src="./Images/To-Do-List.jpg" alt="To-Do list project">
+                    <span class="projectName">To-Do List</span>
+                </a>
+            </div>
+            <div class="projectTile" id="wikiPage">
+                <a href="https://kanera.github.io/My-Wiki-Page/" target="_blank">
+                    <img class="project-image" src="./Images/climbing-website.jpg" alt="Climbing website project">
+                    <span class="projectName">Climbing Website</span>
+                </a>
+            </div>
+            <div class="projectTile" id="timeTable">
+                <a class="project-image" href="https://kanera.github.io/second-weekend-task/" target="_blank">
+                    <img src="./Images/Time-Table.jpg" alt="time table project">
+                    <span class="projectName">Time Table</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <footer class="contact" id="contact">
+        <h2 class="media-header">Contact me on social media:</h2>
+        <div  class="linkContainer">
+            <a id="insta-link" class="media-link" href="https://www.instagram.com/assafkaner/" target="_blank"><i class="fab fa-instagram"></i></a>
+
+            <a id="github-link" class="media-link" href="https://github.com/KanerA" target="_blank"><i class="fab fa-github"></i></a>
+
+            <a id="fb-link" class="media-link" href="https://www.facebook.com/assaf.kaner/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+
+            <a id="fb-link" class="media-link" href="https://www.linkedin.com/in/assaf-kaner-33a258199/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div> 
+        <p class="form-title">Or Fill The Form & I'll Get Back To You With An Offer!</p>
+        <section class="sub-form">
+            <form action="#">
+                <fieldset>
+                    <legend>Keep up with our sales & activity</legend>
+                    <ul> 
+                        <li> <label for="user-name"> Name:</label> <input type="text" name="name" id="user-name" placeholder="Full Name" autocapitalize="words"></li>
+                        <li> <label for="user-email"> E-mail:</label> <input type="email" name="email" id="user-email" placeholder="email address"></li>
+                        <li> <label for="user-number"> phone number:</label> <input type="tel" name="number" id="user-number" placeholder="xxx-xxxxxxx"></li>
+                        <li> <label for="user-city"> city:</label> <input type="text" name="city" id="user-city" placeholder="your city"></li>
+                        <li> <label for="user-sex">Gender:</label> 
+                            <select name="gender" id="user-sex" >
+                                <option value="male">male</option>
+                                <option value="female">female</option>
+                            </select></li>
+                            <li>submit: <input type="submit" name="submit" id="sub-form" value="submit"></li>
+                        </ul>
+                </fieldset>
+            </form>
+        </section>
+    </footer>
+    <script src="https://kit.fontawesome.com/455dcc145f.js" crossorigin="anonymous"></script>
+</body>
+</html>
