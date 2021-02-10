@@ -1,6 +1,7 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -41,8 +42,8 @@ nav a:hover {
 .about {
   display: flex;
   justify-content: space-evenly;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 131vh;
   color: white;
   padding-top: 25vh;
 }
@@ -103,23 +104,58 @@ header {
   padding-top: 25vh;
 }
 .project-tiles {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 100vw;
-  height: 90vh;
+  display: grid;
+  grid-template-columns: 40vw 55vw;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "todo todo-description"
+    "wiki wiki-description"
+    "time-table table-description";
+  column-gap: 30px;
+  row-gap: 30px;
+  justify-items: center;
+  width: 100%;
+  height: auto;
+  padding: 20px 0;
   background-image: url(../Images/background5.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  color: white;
+}
+#todo {
+  grid-area: todo;
+}
+#wiki-page {
+  grid-area: wiki;
+}
+#time-table {
+  grid-area: time-table;
+}
+#todo-description {
+  grid-area: todo-description;
+  align-self: center;
+  max-width: 55vw;
+}
+#wiki-description {
+  grid-area: wiki-description;
+  align-self: center;
+  max-width: 55vw;
+}
+#time-table-description {
+  grid-area: table-description;
+  align-self: center;
+  max-width: 55vw;
 }
 .projectTile {
   display: inline-block;
   text-align: center;
   width: fit-content;
   background-color: #dad1da;
-  padding: 5px 10px 15px 5px;
+  padding: 1% 2% 1% 1%;
   border-radius: 10px;
+}
+.projectTile img {
+  width: 100%;
 }
 .projectName {
   display: block;
@@ -127,9 +163,8 @@ header {
   color: rgb(131, 26, 43);
   font-size: 30px;
 }
-footer {
-  width: 100vw;
-  margin-top: auto;
+.contact-div {
+  width: 100%;
   padding: 10px 0;
   color: white;
   background-image: url(../Images/background5.jpg);
@@ -137,10 +172,11 @@ footer {
   background-size: cover;
 }
 .media-header {
-  margin: 25px 50px;
+  margin: 25px auto;
 }
 .linkContainer {
-  margin: 25px 50px;
+  color: #fff;
+  margin: 25px auto;
 }
 a.media-link {
   font-size: 2rem;
@@ -180,4 +216,11 @@ label {
 }
 input {
   display: table-cell;
+}
+footer {
+  padding: 10px 0;
+  color: white;
+  background-image: url(../Images/background5.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
