@@ -1,3 +1,7 @@
+:root {
+  --main-color: rgb(131, 26, 43);
+  --bgcolor: #1a8362;
+}
 * {
   padding: 0;
   margin: 0;
@@ -8,7 +12,7 @@ body {
   background-image: url(../Images/background.jpg);
   background-repeat: no-repeat;
   color: black;
-  transition: all 0.5 ease;
+  transition: all 0.5 ease-in-out;
 }
 nav ul {
   position: fixed;
@@ -69,7 +73,7 @@ button {
   margin: 40px 10px;
 }
 button.hire {
-  background-color: rgb(131, 26, 43);
+  background-color: var(--main-color);
   color: white;
   outline: none;
   border: none;
@@ -150,7 +154,7 @@ header {
   display: inline-block;
   text-align: center;
   width: fit-content;
-  background-color: #dad1da;
+  background-color: #ddd;
   padding: 1% 2% 1% 1%;
   border-radius: 10px;
 }
@@ -160,7 +164,7 @@ header {
 .projectName {
   display: block;
   text-align: center;
-  color: rgb(131, 26, 43);
+  color: var(--main-color);
   font-size: 30px;
 }
 .contact-div {
@@ -173,17 +177,41 @@ header {
 }
 .media-header {
   margin: 25px auto;
+  padding-left: 20px;
 }
 .linkContainer {
   color: #fff;
   margin: 25px auto;
+  padding-left: 20px;
 }
 a.media-link {
   font-size: 2rem;
   padding: 0.5rem;
 }
-.media-link:hover {
-  color: #4b878b;
+#linkedin-link:hover {
+  border-radius: 10%;
+  background-color: #2867b2;
+}
+#insta-link:hover {
+  border-radius: 10%;
+  background: linear-gradient(
+    45deg,
+    #405de6,
+    #5851db,
+    #833ab4,
+    #c13584,
+    #e1306c,
+    #fd1d1d
+  );
+}
+#github-link:hover {
+  border-radius: 10%;
+  background-color: #ddd;
+  color: #211f1f;
+}
+#fb-link:hover {
+  border-radius: 10%;
+  background-color: #4267b2;
 }
 form {
   width: 50%;
@@ -195,6 +223,8 @@ form {
 .form-title {
   text-align: center;
   font-size: 150%;
+  padding-bottom: 25px;
+  text-decoration: underline;
 }
 form ul {
   list-style: none;
@@ -202,11 +232,11 @@ form ul {
   margin: 20px 150px;
 }
 form li {
-  color: var(--bgcolor);
+  color: #ddd;
 }
 legend {
-  color: var(--bgcolor);
-  background-color: #363636;
+  color: black;
+  background-color: var(--main-color);
   font-size: 20px;
   padding: 3px 6px;
   margin-left: 10%;
@@ -216,6 +246,28 @@ label {
 }
 input {
   display: table-cell;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  width: 10rem;
+  height: 1.5rem;
+  border-radius: 7px;
+  padding-left: 5px;
+}
+select#user-sex {
+  width: 10rem;
+  height: 1.5rem;
+  border-radius: 7px;
+  padding-left: 5px;
+}
+#sub-form {
+  width: 140px;
+  height: 42px;
+  font-family: calibri;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 40px;
 }
 footer {
   padding: 10px 0;
